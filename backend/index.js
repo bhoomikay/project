@@ -18,6 +18,7 @@ const UserSchema = new mongoose.Schema({
 
 
 const User = mongoose.model('payment', UserSchema);
+const User = mongoose.model('register', UserSchema);
 
 app.use(express.json());
 app.use(cors());

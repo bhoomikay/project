@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+// import Register from "../../pages/register";
 const NavBar = () => {
   const { cartList } = useSelector((state) => state.cart);
   const [expand, setExpand] = useState(false);
@@ -85,6 +86,7 @@ const NavBar = () => {
                 onClick={() => setExpand(false)}
               >
                 <span className="nav-link-label">Home</span>
+                {/* <Register/> */}
               </Link>
             </Nav.Item>
 
@@ -98,6 +100,27 @@ const NavBar = () => {
                 <span className="nav-link-label">Shop</span>
               </Link>
             </Nav.Item>
+             {/* <Nav.Item>
+              <Link
+                aria-label="Go to Register Page"
+                className="navbar-link"
+                to="/register"
+                onClick={() => setExpand(false)}
+              >
+                <span className="nav-link-label">Regiseter</span>
+              </Link>
+            </Nav.Item> */}
+            <Nav.Item>
+              <Link
+                aria-label="Go to Login Page"
+                className="navbar-link"
+                to="/login"
+                onClick={() => setExpand(false)}
+              >
+                <span className="nav-link-label">Login</span>
+              </Link>
+            </Nav.Item>
+
 
             <Nav.Item>
               <Link
